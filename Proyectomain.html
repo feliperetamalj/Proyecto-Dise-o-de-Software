@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camiseta Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #009919;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .main {
+            padding: 20px;
+        }
+        .camisetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .camiseta {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+        .camiseta:hover {
+            transform: scale(1.05);
+        }
+        .camiseta img {
+            width: 100%;
+            height: auto;
+        }
+        .camiseta-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .camiseta-info h3 {
+            margin: 10px 0;
+            font-size: 1.4em;
+            color: #004d99;
+        }
+        .camiseta-info p {
+            font-size: 1em;
+            color: #333;
+        }
+        .camiseta-info .precio {
+            font-size: 1.2em;
+            color: #e60000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Camiseta Store</h1>
+        <p>Encuentra las mejores camisetas de tus equipos favoritos a los mejores precios</p>
+    </div>
+    <div class="main">
+        <div class="main">
+            <div class="camisetas">
+                <div class="camiseta">
+                    <img src="data:image/jpeg;base64,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" alt="Camiseta FC Barcelona">
+                    <div class="camiseta-info">
+                        <h3>Camiseta FC Barcelona</h3>
+                        <p>Temporada 2024/2025</p>
+                        <p class="precio">$80.000</p>
+                    </div>
+                </div>
+                <div class="camiseta">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFwAXAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBgIFAQQHAP/EADkQAAIBAwIEAwUFBgcAAAAAAAECAwAEERIhBQYxURNhcUFSgZGxFDKhosEiIyQzgvAlYpKjwtHh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwCoxvU1FexvRFWgwBUgtbnDeHz8QuVhto2Zj1wOn0H405WHJMaBXu59+ybkH1O35asCZY2T3c8cYOhWdVaQjZdTBQfmRTfHyCunLcT/ANjH/KmS04NYWi6Uto2O27qD0IIx7BuAdsbjNWaqcZWkCBxXkmaytTPb3a3GGUeGU0E5IGxz3IpZ8MqxVlKsOqkYIrs7RK6gOqsMg4IyMg5B+BANVt9y9w29yZIBG3vR7YJ6nHTPnioOVhPKs+HTXxjlSazRprQ+NCu7e8o8x+v0FLwQEAggg9CDmg1SlQ0VuGOomPegqMb0VVrAG9HjjLsEUZZjgDzoHXkO2FvDM80ZWWRiFdgc6SqkAeXQ7e2m9c9D7K0YbX+FEcWzRgBPh0osUnjRjJI1L7DgjPmKuaK+TmjhsXMMHBi5aWYvGJlIMazKAfCY52cqc4Pp12pgUUncPi5b+zrdrwcMZJljVpVWaSSSINpJJZjqARsEnPmKuhzHZmLxQJfCCl2JXfToVwQPNXB7/Gguc+2tLh96bp5EbSMH9nAIPofPp86i3GLeKQxSJKJgYwY8AsNbaR0O25rNlLwya58a0miaZ0AADYLLgEED2jDDfsRUi1YdMYrnXHY8cXu8oFPiHYdvYfiN/jXRaW+cLcGO3nUbhirHvkbfSiE5o6EY963SlCK70C+BvVvy5bfaeM2iYyA+s/07/pVWo3rYhLIwZGKt3BwaDrdqun0zWlGpSR4/dYgfPb8KQIeIX0f8u9uV9JW/7pr5cupri1aW4kMj6yCzdTsKDE1pDwy1TLTXEcU8ksUcjACI6ZHbGlckYJXfuKjcx2NpaBTYroMjwAeO+8UcegnOeuEA+GavY0VojrRWyTswz12rYKodIKKR2IqhflSGK9aSS1BYv4hKyv8AeV0kJ07j7xkP9PY7b3L1jF9k4ddwqYFWAhYRvhW04BbAJGFGMjP41ayQxErqiRgpBwVBrMSrGGjRQqpjSoGAB5UBA37YUVX8xwmThU226Yb8apePXUp4hJGsjqigDSGIB2z+tVJJ7n51AJhQiN6MxoLNvQUCjejIKGvWjJQFWmrlc4sXHeY/QUrLTRy4P4RP80hNAyDZQKNIcFaAP5iiiTnGmtI2m3Wok4lU+8MVkHKD0qD/AHQfdaoFTjo08Vn89J/KKrmNWXMpA4o3min+/lVOz1FZdtq12fevSPWuz70FetFSgrRVoDrTdy6MWUHnqP5jSeppz5fGLC2bshJ/1Gguo95fSpXRwgNQt+5rN4f3QrQ24z+6X0rx3OO4qFs2qFfSpg7eYNRCjzUdPEIz3iH1NUbPV3zmQt7CR7UP1/8AaWneoqUkla7Sb1CSSglt6Dy0RTQl61NaAymnXgh/wy3wRun6mkgGpD0oOo26NpGBtUbtGEJ1YwDXMwSBsceleJz13q0dOsJF8Hdl2862D97KsMHr7a5Rgdh8qgwHYfKgaOeWVby3wwJKHOD6Uqu9YbYbbUJjUHmahk71k1A0H//Z" alt="Camiseta Real Madrid">
+                    <div class="camiseta-info">
+                        <h3>Camiseta Real Madrid</h3>
+                        <p>Temporada 2024/2025</p>
+                        <p class="precio">$85.000</p>
+                    </div>
+                </div>
+                <div class="camiseta">
+                    <img src="data:image/jpeg;base64,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" alt="Camiseta Manchester United">
+                    <div class="camiseta-info">
+                        <h3>Camiseta PSG</h3>
+                        <p>Temporada 2024/2025</p>
+                        <p class="precio">$75.000</p>
+                    </div>
+                </div>
+                <div class="camiseta">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxqvjvTFomLo-QoFoW7n4lSI-LSIR1xFHwmQ&s" alt="Camiseta Man U">
+                    <div class="camiseta-info">
+                        <h3>Camiseta Manchester United</h3>
+                        <p>Temporada 2024/2025</p>
+                        <p class="precio">$90.000</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
