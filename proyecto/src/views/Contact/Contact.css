@@ -1,47 +1,106 @@
 .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(184, 184, 184, 0.2);
+  max-width: 1000px; /* Aumenta el ancho máximo del contenedor */
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(184, 184, 184, 0.2);
+}
+
+.contact-container h1 {
+  text-align: center;
+  color: #004d99;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro del formulario */
+}
+
+.contact-form label {
+  margin-bottom: 0.5rem;
+  color: #303030;
+  width: 100%; /* Asegura que los labels ocupen todo el ancho del contenedor */
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem; /* Aumenta el padding para agrandar las cajas */
+  border: 1px solid #6e6d6d;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #131212;
+  width: 100%; /* Asegura que las cajas ocupen todo el ancho del contenedor */
+  max-width: 900px; /* Aumenta el ancho máximo de las cajas */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+  resize: none; /* Deshabilita la opción de redimensionar */
+}
+
+.contact-form textarea {
+  height: 200px; /* Aumenta la altura del textarea */
+}
+
+.contact-form button {
+  padding: 0.75rem;
+  background-color: #009919;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+  max-width: 900px; /* Aumenta el ancho máximo del botón */
+}
+
+.contact-form button:hover {
+  background-color: #007a14;
+}
+
+/* Dark mode styles */
+.dark .contact-container {
+  background-color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark .contact-container h1 {
+  color: #ffffff;
+}
+
+.dark .contact-form label {
+  color: #cccccc;
+}
+
+.dark .contact-form input,
+.dark .contact-form textarea {
+  background-color: #444444;
+  color: #ffffff;
+  border: 1px solid #888888;
+}
+
+.dark .contact-form button {
+  background-color: #006600;
+}
+
+.dark .contact-form button:hover {
+  background-color: #004d00;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
   }
-  
-  .contact-container h1 {
-    text-align: center;
-    color: #004d99;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form label {
-    margin-bottom: 0.5rem;
-    color: #303030;
-  }
-  
+
   .contact-form input,
   .contact-form textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #6e6d6d;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #131212;
+    font-size: 0.875rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    padding: 0.5rem; /* Reduce el padding en pantallas más pequeñas */
   }
-  
-  .contact-form button {
-    padding: 0.75rem;
-    background-color: #009919;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+
+  .contact-form textarea {
+    height: 150px; /* Ajusta la altura del textarea en pantallas más pequeñas */
   }
-  
-  .contact-form button:hover {
-    background-color: #007a14;
-  }
+}
