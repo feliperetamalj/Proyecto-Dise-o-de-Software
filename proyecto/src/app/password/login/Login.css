@@ -5,11 +5,9 @@
   min-height: 100vh;
   background-color: #f0f0f0;
 }
-
 .dark .login-container {
-  background-color: #f0ecec;
+  background-color: #121212; /* Fondo oscuro */
 }
-
 .login-box {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -18,32 +16,26 @@
   width: 100%;
   max-width: 400px;
 }
-
 .dark .login-box {
-  background-color: #333333;
+  background-color: #333333; /* Fondo oscuro */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-
 .login-success-message {
   color: #28a745;
   text-align: center;
   font-size: 1.25rem;
   font-weight: bold;
 }
-
 .login-message {
   text-align: center;
   margin-top: 1rem;
 }
-
 .login-message-success {
   color: #28a745;
 }
-
 .login-message-failure {
   color: #dc3545;
 }
-
 .login-back-to-signup {
   text-align: center;
   color: #007bff;
@@ -51,11 +43,9 @@
   text-decoration: underline;
   margin-top: 1rem;
 }
-
 .dark .login-back-to-signup {
   color: #66b2ff;
 }
-
 /* Estilos para los campos de entrada */
 .login-box input {
   margin-bottom: 1rem;
@@ -68,13 +58,11 @@
   font-size: 1rem; /* Ajusta el tamaño de la fuente */
   box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
 }
-
 .dark .login-box input {
-  background-color: #fff; /* Fondo blanco */
-  color: #131212; /* Texto negro */
+  background-color: #444444; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
   border: 1px solid #888888;
 }
-
 /* Estilos para el botón */
 .login-box button {
   width: 100%;
@@ -86,17 +74,13 @@
   font-size: 16px;
   cursor: pointer;
 }
-
 .login-box button:hover {
   background-color: #0056b3; /* Color de fondo al pasar el cursor */
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .login-box {
-    padding: 1rem;
-  }
-  .login-message {
-    font-size: 0.875rem;
-  }
+.dark .login-box button {
+  background-color: #0056b3; /* Fondo azul oscuro */
+  color: white;
+}
+.dark .login-box button:hover {
+  background-color: #003f7f; /* Color de fondo al pasar el cursor en modo oscuro */
 }
