@@ -1,0 +1,67 @@
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .dark .signup-container {
+    background-color: #121212;
+  }
+  
+  .signup-box {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .dark .signup-box {
+    background-color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .signup-success-message {
+    color: #28a745;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .signup-message {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .signup-message-success {
+    color: #28a745;
+  }
+  
+  .signup-message-failure {
+    color: #dc3545;
+  }
+  
+  .signup-back-to-login {
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+  
+  .dark .signup-back-to-login {
+    color: #66b2ff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .signup-box {
+      padding: 1rem;
+    }
+    .signup-message {
+      font-size: 0.875rem;
+    }
+  }

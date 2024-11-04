@@ -5,10 +5,11 @@ body {
   padding: 0;
 }
 
-/* Dark mode support */
-.dark body {
-  background-color: #121212;
-  color: #e0e0e0;
+.home-container {
+  background-color: #f0f0f0;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
 }
 
 .header {
@@ -16,17 +17,24 @@ body {
   color: #ffffff;
   padding: 20px;
   text-align: center;
-  width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  margin-top: 5rem; /* Ajuste para evitar que la navbar cubra la camiseta */
 }
 
-/* Dark mode for header */
-.dark .header {
-  background-color: #006600;
+.header-title {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.header-slogan {
+  font-size: 1rem;
 }
 
 .main {
-  padding: 20px;
+  padding: 80px 20px 20px;
   width: 100%;
+  margin-top: 4rem; /* Agrega este margen para evitar solapamiento */
 }
 
 .camisetas {
@@ -41,23 +49,19 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 250px;
+  width: 100%;
+  max-width: 300px;
   transition: transform 0.3s;
-}
-
-/* Dark mode for camiseta */
-.dark .camiseta {
-  background-color: #1e1e1e;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
 .camiseta:hover {
   transform: scale(1.05);
 }
 
-.camiseta img {
+.camiseta-img {
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .camiseta-info {
@@ -65,34 +69,92 @@ body {
   text-align: center;
 }
 
-.camiseta-info h3 {
+.camiseta-title {
   margin: 10px 0;
   font-size: 1.4em;
   color: #004d99;
 }
 
-/* Dark mode for camiseta-info */
-.dark .camiseta-info h3 {
-  color: #66b2ff;
-}
-
-.camiseta-info p {
+.camiseta-season {
   font-size: 1em;
   color: #3d3c3c;
 }
 
-/* Dark mode for camiseta-info text */
-.dark .camiseta-info p {
-  color: #7c7c7c;
-}
-
-.camiseta-info .precio {
+.camiseta-price {
   font-size: 1.2em;
   color: #e60000;
   font-weight: bold;
 }
 
-/* Dark mode for price */
-.dark .camiseta-info .precio {
+/* Dark mode support */
+.dark .home-container {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark .header {
+  background-color: #006600;
+}
+
+.dark .camiseta {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark .camiseta-title {
+  color: #66b2ff;
+}
+
+.dark .camiseta-season {
+  color: #7c7c7c;
+}
+
+.dark .camiseta-price {
   color: #f1f1f1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-top: 6rem; /* Aumentado para evitar que la camiseta se solape con la navbar */
+  }
+  .main {
+    padding: 60px 10px 10px;
+  }
+  .camiseta {
+    width: 100%;
+    max-width: 300px;
+  }
+  .camiseta-title {
+    font-size: 1.2em;
+  }
+  .camiseta-season {
+    font-size: 0.9em;
+  }
+  .camiseta-price {
+    font-size: 1em;
+  }
+}
+
+/* Resolución mediana (768px a 1080px) */
+@media (min-width: 769px) and (max-width: 1080px) {
+  .header {
+    margin-top: 4rem;
+  }
+}
+
+/* Resolución grande (1080px a 1440px) */
+@media (min-width: 1081px) and (max-width: 1440px) {
+  .header {
+    margin-top: 2rem;
+  }
+}
+
+/* Resolución extra grande (más de 1440px) */
+@media (min-width: 1441px) {
+  .header {
+    margin-top: 1rem;
+  }
 }

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 function DarkModeToggle() {
+  const { t } = useTranslation();
+
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle('dark');
   };
@@ -10,7 +13,7 @@ function DarkModeToggle() {
       onClick={toggleDarkMode}
       className="bg-white text-green-700 px-4 py-2 rounded dark:bg-gray-600 dark:text-white transition-colors duration-300"
     >
-      Toggle Dark Mode
+      {t('nav.darkmode')}
     </button>
   );
 }

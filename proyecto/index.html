@@ -4,8 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="/src/assets/camistea-png.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camiseta store</title>
+    <title>Camiseta Store</title>
+    <script>
+      function setBodyClass() {
+        const width = window.innerWidth;
+        document.body.classList.remove('small', 'medium', 'large', 'extra-large');
+        
+        if (width >= 1920) {
+          document.body.classList.add('extra-large');
+        } else if (width >= 1440) {
+          document.body.classList.add('large');
+        } else if (width >= 1080) {
+          document.body.classList.add('medium');
+        } else {
+          document.body.classList.add('small');
+        }
+      }
+
+      // Usar requestAnimationFrame para optimizar el rendimiento
+      let ticking = false;
+      window.addEventListener('resize', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            setBodyClass();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Establecer clase inicial al cargar
+      window.addEventListener('DOMContentLoaded', setBodyClass);
+    </script>
   </head>
   <body class="bg-white dark:bg-black">
     <div id="root"></div>

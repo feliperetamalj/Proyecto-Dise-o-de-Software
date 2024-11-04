@@ -1,0 +1,72 @@
+.language-container {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  background-color: #0a6619;
+  color: white;
+  border: none; /* Sin borde */
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-button:hover {
+  background-color: #006600;
+}
+
+.language-dropdown {
+  display: none; /* Oculto inicialmente */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  color: black; /* Letras negras dentro del dropdown */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 1000;
+  width: 200px;
+  border: 1px solid #333; /* Borde gris oscuro */
+}
+
+.language-container:hover .language-dropdown {
+  display: block; /* Muestra el menú desplegable al pasar el cursor */
+}
+
+.language-dropdown label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: black; /* Asegura que las letras sean negras */
+}
+
+.language-dropdown input[type="radio"] {
+  margin-right: 10px;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Dark Mode Styles */
+.dark .language-button {
+  background-color: #0a6619;
+  color: #fff;
+  border: none; /* Sin borde */
+}
+
+.dark .language-dropdown {
+  background-color: #333;
+  color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333; /* Borde gris oscuro */
+}
+
+.dark .language-dropdown label {
+  color: white;
+}

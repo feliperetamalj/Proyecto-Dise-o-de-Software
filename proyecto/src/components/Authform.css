@@ -1,0 +1,91 @@
+.auth-form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(184, 184, 184, 0.2);
+}
+
+.auth-form-container h1 {
+  text-align: center;
+  color: #004d99;
+}
+
+.auth-form-container h2 {
+  text-align: center;
+  color: #004d99;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-label {
+  display: block;
+  color: #555;
+  margin-bottom: 5px;
+  color: #303030;
+  width: 100%;
+}
+
+.auth-input {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #6e6d6d;
+  border-radius: 4px;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #131212; /* Texto negro */
+  width: 100%; /* Asegura que las cajas ocupen todo el ancho del contenedor */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+}
+
+.auth-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Fondo azul */
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el cursor */
+}
+
+/* Dark mode styles */
+.dark .auth-form-container {
+  background-color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.dark .auth-form-container h1,
+.dark .auth-form-container h2 {
+  color: #ffffff;
+}
+
+.dark .auth-label {
+  color: #cccccc;
+}
+
+.dark .auth-input {
+  background-color: #444444; /* Fondo negro */
+  color: #ffffff; /* Texto blanco */
+  border: 1px solid #888888;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-form-container {
+    padding: 1rem;
+  }
+  .auth-input {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+}
