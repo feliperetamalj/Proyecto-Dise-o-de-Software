@@ -27,6 +27,8 @@ i18n.use(initReactI18next).init({
         'contact.email': 'Email',
         'contact.message': 'Message',
         'contact.send': 'Send',
+        "contact.success": "Message sent successfully!",
+        "contact.failure": "An error occurred. Please try again.",
 
         // Login.jsx
         'login.title': 'Login',
@@ -72,6 +74,8 @@ i18n.use(initReactI18next).init({
         'contact.email': 'Correo electrónico',
         'contact.message': 'Mensaje',
         'contact.send': 'Enviar',
+        "contact.success": "¡Mensaje enviado exitosamente!",
+        "contact.failure": "Ocurrió un error. Por favor, inténtalo de nuevo.",
 
         // Login.jsx
         'login.title': 'Iniciar sesión',
@@ -90,7 +94,7 @@ i18n.use(initReactI18next).init({
         'signup.success': '¡Registro exitoso!',
         'signup.failure': 'Ocurrió un error. Por favor, inténtalo de nuevo.',
         'signup.login': 'Volver a iniciar sesión',
-
+          
         //Language.jsx
         "language.idioma": "Idioma"
       }
@@ -117,6 +121,8 @@ i18n.use(initReactI18next).init({
         'contact.email': 'E-Mail',
         'contact.message': 'Nachricht',
         'contact.send': 'Senden',
+        "contact.success": "Nachricht erfolgreich gesendet!",
+        "contact.failure": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
 
         // Login.jsx
         'login.title': 'Anmelden',

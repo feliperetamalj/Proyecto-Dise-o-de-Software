@@ -26,7 +26,7 @@ const Navbar = () => {
         <li><a href="/">{t('nav.home')}</a></li>
         <li><a href="/contact">{t('nav.contact')}</a></li>
         <li className="navbar-language"><Language /></li>
-        <li><a href="/password/login">{t('nav.login')}</a></li>
+        <li><a href="/form">{t('nav.login')}</a></li>
       </ul>
 
       <DarkModeToggle />

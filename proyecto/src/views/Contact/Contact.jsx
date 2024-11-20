@@ -7,22 +7,37 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
-
     const storedName = localStorage.getItem('contactName');
     const storedEmail = localStorage.getItem('contactEmail');
     if (storedName) setName(storedName);
     if (storedEmail) setEmail(storedEmail);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Guardar los valores en el localStorage
     localStorage.setItem('contactName', name);
     localStorage.setItem('contactEmail', email);
-  
-    console.log('Form submitted:', { name, email, message });
+
+    try {
+      const response = await fetch('http://localhost:3001/send-Email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (response.ok) {
+        setStatus('Email sent successfully!'); 
+      } else {
+        setStatus('Failed to send email.');
+      }
+    } catch (error) {
+      setStatus('Failed to send email.');
+    }
   };
 
   return (
@@ -61,6 +76,7 @@ function Contact() {
 
         <button type="submit">{t('contact.send')}</button>
       </form>
+       {status && <p>{status}</p>}
     </div>
   );
 }
