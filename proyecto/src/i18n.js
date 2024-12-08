@@ -93,6 +93,8 @@ i18n.use(initReactI18next).init({
 
         //Language.jsx
         "language.idioma": "Idioma"
+
+        
       }
     },
     de: {
