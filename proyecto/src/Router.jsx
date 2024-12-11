@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './views/Home/Home';
 import Contact from './views/Contact/Contact';
 import Navbar from './components/navbar/Navbar';
-import Login from "./app/password/login/Login";
-import Signup from "./app/password/signup/Signup";
+import RegisterForm from './views/DataBase/RegisterForm.jsx';
+import LoginForm from './views/DataBase/LoginForm.jsx';
 
 const AppRouter = () => {
   return (
@@ -13,8 +13,8 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path= "/password/login" element={<Login />} />
-        <Route path = "/password/signup" element={<Signup />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/login" element={<LoginForm />} />
         {/* Añade más rutas aquí si es necesario */}
       </Routes>
     </Router>
