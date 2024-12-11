@@ -3,6 +3,7 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
+  height:  300vh ;
 }
 
 .home-container {
@@ -20,6 +21,9 @@ body {
   width: 100vw;
   box-sizing: border-box;
   margin-top: 5rem; /* Ajuste para evitar que la navbar cubra la camiseta */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header-title {
@@ -32,16 +36,19 @@ body {
 }
 
 .main {
-  padding: 80px 20px 20px;
   width: 100%;
   margin-top: 4rem; /* Agrega este margen para evitar solapamiento */
+  justify-content: center;
+  display: flex;
 }
 
 .camisetas {
+  gap: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  position: absolute;
+  top: 30%;
 }
 
 .camiseta {
@@ -120,8 +127,8 @@ body {
     font-size: 1.2rem;
     margin-top: 6rem; /* Aumentado para evitar que la camiseta se solape con la navbar */
   }
-  .main {
-    padding: 60px 10px 10px;
+  .camisetas {
+    top: 65%;
   }
   .camiseta {
     width: 100%;

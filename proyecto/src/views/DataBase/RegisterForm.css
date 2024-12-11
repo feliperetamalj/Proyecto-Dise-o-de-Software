@@ -1,116 +1,125 @@
-.contact-container {
-    max-width: 1000px; /* Aumenta el ancho máximo del contenedor */
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(184, 184, 184, 0.2);
-  }
-  
-  .contact-container h1 {
-    text-align: center;
-    color: #004d99;
-  }
-  
-  .contact-container h2 {
-    text-align: center;
-    color: #004d99;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos dentro del formulario */
-  }
-  
-  .contact-form label {
-    margin-bottom: 0.5rem;
-    color: #303030;
-    width: 100%; /* Asegura que los labels ocupen todo el ancho del contenedor */
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    margin-bottom: 1rem;
-    padding: 0.75rem; /* Aumenta el padding para agrandar las cajas */
-    border: 1px solid #6e6d6d;
-    border-radius: 4px;
-    background-color: #fff;
-    color: #131212;
-    width: 100%; /* Asegura que las cajas ocupen todo el ancho del contenedor */
-    max-width: 900px; /* Aumenta el ancho máximo de las cajas */
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
-    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
-    resize: none; /* Deshabilita la opción de redimensionar */
-  }
-  
-  .contact-form textarea {
-    height: 200px; /* Aumenta la altura del textarea */
-  }
-  
-  .contact-form button {
-    padding: 0.75rem;
-    background-color: #009919;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%; /* Asegura que el botón ocupe todo el ancho del contenedor */
-    max-width: 900px; /* Aumenta el ancho máximo del botón */
-  }
-  
-  .contact-form button:hover {
-    background-color: #007a14;
-  }
-  
-  /* Dark mode styles */
-  .dark .contact-container {
-    background-color: #333333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
-  .dark .contact-container h1 {
-    color: #ffffff;
-  }
-  
-  .dark .contact-container h2 {
-    color: #ffffff;
-  }
-  
-  .dark .contact-form label {
-    color: #cccccc;
-  }
-  
-  .dark .contact-form input,
-  .dark .contact-form textarea {
-    background-color: #444444;
-    color: #ffffff;
-    border: 1px solid #888888;
-  }
-  
-  .dark .contact-form button {
-    background-color: #006600;
-  }
-  
-  .dark .contact-form button:hover {
-    background-color: #004d00;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .contact-container {
-      padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
-    }
-  
-    .contact-form input,
-    .contact-form textarea {
-      font-size: 0.875rem; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
-      padding: 0.5rem; /* Reduce el padding en pantallas más pequeñas */
-    }
-  
-    .contact-form textarea {
-      height: 150px; /* Ajusta la altura del textarea en pantallas más pequeñas */
-    }
-  }
-  
+.register-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #0a0a0a;
+  border-radius: 5px;
+  background-color: #fcf9f9;
+}
+
+.register-form-title {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: blue;
+}
+
+.register-form-group {
+  margin-bottom: 1rem;
+  color: black;
+  position: relative;
+}
+
+.register-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.register-form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: rgb(5, 5, 5);
+  background-color: white;
+}
+
+.register-form-input.input-error {
+  border-color: red;
+}
+
+.register-form-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.register-form-button:hover {
+  background-color: #0056b3;
+}
+
+.register-form-message {
+  text-align: center;
+  margin-top: 1rem;
+  color: #007bff;
+}
+
+/* Estilos de error similares al login form */
+.error-container {
+  display: flex;
+  align-items: center;
+  background: #ffe6e6;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.error-icon {
+  color: red;
+  margin-right: 5px;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Dark mode styles */
+.dark .register-form {
+  background-color: #333333;
+  border: 1px solid #444444;
+}
+
+.dark .register-form-title {
+  color: #ffffff;
+}
+
+.dark .register-form-group {
+  color: #cccccc;
+}
+
+.dark .register-form-input {
+  background-color: #444444;
+  color: #ffffff;
+  border: 1px solid #888888;
+}
+
+.dark .register-form-button {
+  background-color: #006600;
+}
+
+.dark .register-form-button:hover {
+  background-color: #004d00;
+}
+
+.dark .register-form-message {
+  color: #66ff66;
+}
+
+.dark .error-container {
+  background: #ffcccc;
+  border: 1px solid #ff6666;
+}
+
+.dark .error-icon {
+  color: #ff6666;
+}
+
+.dark .error-text {
+  color: #ff6666;
+}

@@ -27,6 +27,8 @@ i18n.use(initReactI18next).init({
         'contact.email': 'Email',
         'contact.message': 'Message',
         'contact.send': 'Send',
+        "contact.success": "Message sent successfully",
+        "contact.failure": "An error occurred. Please try again",
 
         // Login.jsx
         'login.title': 'Login',
@@ -72,6 +74,10 @@ i18n.use(initReactI18next).init({
         'contact.email': 'Correo electrónico',
         'contact.message': 'Mensaje',
         'contact.send': 'Enviar',
+        'contact.success': 'Mensaje enviado correctamente',
+        'contact.failure': 'Ocurrió un error. Por favor, inténtalo de nuevo.',
+
+
 
         // Login.jsx
         'login.title': 'Iniciar sesión',
@@ -92,10 +98,32 @@ i18n.use(initReactI18next).init({
         'signup.login': 'Volver a iniciar sesión',
 
         //Language.jsx
-        "language.idioma": "Idioma"
+        "language.idioma": "Idioma",
 
+        //CartButton.jsx
+        "cart.addSuccess": "Producto añadido al carrito",
+        "cart.addFailure": "Error al añadir al carrito",
+        "cart.button": "Carrito",
+        "cart.empty": "Carrito vacío",
+        "cart.addButton": "Añadir al carrito",
         
+        "title": "Iniciar sesión",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "submit": "Enviar",
+        "success": "Has iniciado sesión correctamente",
+        "failure": "Error al iniciar sesión",
+        "signup": "¿No tienes cuenta? Regístrate",
+        "emailRequired": "El email es requerido",
+        "emailInvalid": "El email no es válido",
+        "passwordRequired": "La contraseña es requerida",
+        "passwordMinLength": "La contraseña debe tener al menos 5 caracteres",
+        "contact.validation.nameRequired": "El nombre es requerido",
+        "contact.validation.messageRequired": "Un mensaje es requerido",
+        "nav.logout": "Cerrar sesión",
       }
+
+
     },
     de: {
       translation: {
@@ -119,6 +147,8 @@ i18n.use(initReactI18next).init({
         'contact.email': 'E-Mail',
         'contact.message': 'Nachricht',
         'contact.send': 'Senden',
+        'contact.success': 'Nachricht erfolgreich gesendet',
+        'contact.failure': 'Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.',
 
         // Login.jsx
         'login.title': 'Anmelden',

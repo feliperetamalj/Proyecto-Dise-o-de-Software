@@ -2,18 +2,21 @@
   max-width: 400px;
   margin: 0 auto;
   padding: 2rem;
-  border: 1px solid #ccc;
+  border: 1px solid #0a0a0a;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #fcf9f9;
 }
 
 .login-form-title {
   margin-bottom: 1rem;
   text-align: center;
+  color: blue;
 }
 
 .login-form-group {
   margin-bottom: 1rem;
+  color: black;
+  position: relative; /* por si se necesitan posicionar elementos sobre el input */
 }
 
 .login-form-label {
@@ -26,6 +29,13 @@
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: rgb(5, 5, 5);
+  background-color: white;
+}
+
+/* Estado de error en el input */
+.login-form-input.input-error {
+  border-color: red;
 }
 
 .login-form-button {
@@ -36,19 +46,115 @@
   background-color: #007bff;
   color: white;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-form-button:hover {
+  background-color: #0056b3;
 }
 
 .login-form-message {
   text-align: center;
   margin-top: 1rem;
+  color: #007bff;
 }
 
 .login-form-register {
   text-align: center;
   margin-top: 1rem;
+  color: blue;
 }
 
 .login-form-link {
   color: #007bff;
   text-decoration: none;
+}
+
+.login-form-link:hover {
+  text-decoration: underline;
+}
+
+/* Mensajes de error debajo del campo */
+.login-form-error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Contenedor de error por encima del input, similar al ejemplo mostrado */
+.error-container {
+  display: flex;
+  align-items: center;
+  background: #ffe6e6;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px; /* Aumenta el espacio debajo del error */
+}
+
+.error-icon {
+  color: red;
+  margin-right: 5px;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Dark mode styles */
+.dark .login-form {
+  background-color: #333333;
+  border: 1px solid #444444;
+}
+
+.dark .login-form-title {
+  color: #ffffff;
+}
+
+.dark .login-form-group {
+  color: #cccccc;
+}
+
+.dark .login-form-input {
+  background-color: #444444;
+  color: #ffffff;
+  border: 1px solid #888888;
+}
+
+.dark .login-form-button {
+  background-color: #006600;
+}
+
+.dark .login-form-button:hover {
+  background-color: #004d00;
+}
+
+.dark .login-form-message {
+  color: #66ff66;
+}
+
+.dark .login-form-register {
+  color: #66ff66;
+}
+
+.dark .login-form-link {
+  color: #66ff66;
+}
+
+.dark .login-form-link:hover {
+  text-decoration: underline;
+}
+
+.dark .error-container {
+  background: #ffcccc;
+  border: 1px solid #ff6666;
+}
+
+.dark .error-icon {
+  color: #ff6666;
+}
+
+.dark .error-text {
+  color: #ff6666;
 }

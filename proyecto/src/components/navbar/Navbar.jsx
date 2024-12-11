@@ -1,18 +1,23 @@
-// src/components/navbar/Navbar.jsx
 import React, { useState, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 import DarkModeToggle from './DarkModeToggle';
 import Language from '../Language/Language';
-import { UserContext } from '../../context/UserContext'; // Importa el contexto de usuario
+import CartButton from './CartButton';
+import { UserContext } from '../../context/UserContext';
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const { user } = useContext(UserContext); // Usa el contexto de usuario
+  const { user, logout } = useContext(UserContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout();
   };
 
   return (
@@ -29,7 +34,11 @@ const Navbar = () => {
         <li><a href="/contact">{t('nav.contact')}</a></li>
         <li className="navbar-language"><Language /></li>
         {user ? (
-          <li>Bienvenido, {user.email}</li>
+          <>
+            <li>Bienvenido, {user.email}</li>
+            <li><CartButton /></li>
+            <li><a href="/" className="logout-link" onClick={handleLogout}>{t('nav.logout')}</a></li>
+          </>
         ) : (
           <li><a href="/login">{t('nav.login')}</a></li>
         )}
